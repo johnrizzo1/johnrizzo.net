@@ -1,0 +1,4 @@
+baseURL = 'https://johnrizzo.net/'
+languageCode = 'en-us'
+title = 'My Digital Life'
+theme = 'hugo-refresh'
