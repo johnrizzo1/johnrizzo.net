@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lone Coder on João Ninguém</title>
+    <link>http://localhost:1313/pt-br/authors/lone-coder/</link>
+    <description>Recent content in Lone Coder on João Ninguém</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 08 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt-br/authors/lone-coder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mermaid JS support</title>
+      <link>http://localhost:1313/pt-br/posts/mermaid-support/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt-br/posts/mermaid-support/</guid>
+      <description>Se quiser usar o Mermaid-JS em sua página. Use o shortcode mermaid em seus conteúdos Markdown.&#xA;flowchart LR A --&gt; B B --&gt; C C --&gt; D D --&gt; B sequenceDiagram participant Alice participant Bob Alice-&gt;&gt;Bob: Hi Bob Bob-&gt;&gt;Alice: Hi Alice Entro mais exemplos na página do Mermaid-JS.</description>
+    </item>
+  </channel>
+</rss>
