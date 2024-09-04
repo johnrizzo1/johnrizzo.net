@@ -3,17 +3,17 @@
 	"file": "coder-dark.css",
 	"sourceRoot": "/Users/jrizzo/Projects/johnrizzo.net",
 	"sources": [
-		"themes/hugo-coder/assets/scss/coder-dark.scss",
-		"themes/hugo-coder/assets/scss/_variables.scss",
-		"themes/hugo-coder/assets/scss/_base_dark.scss",
-		"themes/hugo-coder/assets/scss/_content_dark.scss",
-		"themes/hugo-coder/assets/scss/_notices_dark.scss",
-		"themes/hugo-coder/assets/scss/_navigation_dark.scss",
-		"themes/hugo-coder/assets/scss/_tabs_dark.scss",
-		"themes/hugo-coder/assets/scss/_taxonomies_dark.scss",
-		"themes/hugo-coder/assets/scss/_footer_dark.scss",
-		"themes/hugo-coder/assets/scss/_float_dark.scss",
-		"themes/hugo-coder/assets/scss/_syntax_dark.scss"
+		"themes/jnet/assets/scss/coder-dark.scss",
+		"themes/jnet/assets/scss/_variables.scss",
+		"themes/jnet/assets/scss/_base_dark.scss",
+		"themes/jnet/assets/scss/_content_dark.scss",
+		"themes/jnet/assets/scss/_notices_dark.scss",
+		"themes/jnet/assets/scss/_navigation_dark.scss",
+		"themes/jnet/assets/scss/_tabs_dark.scss",
+		"themes/jnet/assets/scss/_taxonomies_dark.scss",
+		"themes/jnet/assets/scss/_footer_dark.scss",
+		"themes/jnet/assets/scss/_float_dark.scss",
+		"themes/jnet/assets/scss/_syntax_dark.scss"
 	],
 	"sourcesContent": [
 		"@import \"variables\";\n@import \"base_dark\";\n@import \"content_dark\";\n@import \"notices_dark\";\n@import \"navigation_dark\";\n@import \"tabs_dark\";\n@import \"taxonomies_dark\";\n@import \"footer_dark\";\n@import \"float_dark\";\n@import \"syntax_dark\";\n",
