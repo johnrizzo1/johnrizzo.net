@@ -4,7 +4,7 @@
     <title>Emoji on John Rizzo</title>
     <link>http://localhost:1313/tags/emoji/</link>
     <description>Recent content in Emoji on John Rizzo</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/emoji/index.xml" rel="self" type="application/rss+xml" />

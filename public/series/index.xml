@@ -4,21 +4,21 @@
     <title>Series on John Rizzo</title>
     <link>http://localhost:1313/series/</link>
     <description>Recent content in Series on John Rizzo</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demonstração Do Tema</title>
       <link>http://localhost:1313/series/demonstra%C3%A7%C3%A3o-do-tema/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/series/demonstra%C3%A7%C3%A3o-do-tema/</guid>
       <description></description>
     </item>
     <item>
       <title>Theme Demo</title>
       <link>http://localhost:1313/series/theme-demo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/series/theme-demo/</guid>
       <description></description>
     </item>
