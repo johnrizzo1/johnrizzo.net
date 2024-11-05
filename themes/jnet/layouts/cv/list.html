@@ -1,0 +1,49 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+    <article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
+    {{ partial "cv/header.html" . }}
+
+    <hr>
+
+    {{ if .Site.Params.summary.enable }}
+    {{ partial "cv/summary.html" . }}
+    {{ end }}
+
+    <hr>
+
+    <div class="resume-body">
+
+        <div class="row">
+
+            <div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
+
+                {{ if .Site.Params.experience.enable }}
+                {{ partial "cv/experience.html" . }}
+                {{ end }}
+
+                {{ if .Site.Params.projects.enable }}
+                {{ partial "cv/projects.html" . }}
+                {{ end }}
+
+                {{ if .Site.Params.information.enable }}
+                {{ partial "cv/information.html" . }}
+                {{ end }}
+
+            </div><!--//resume-main-->
+
+            {{ partial "cv/sidebar.html" . }}
+
+        </div><!--//row-->
+
+    </div><!--//resume-body-->
+
+    <hr>
+
+    {{/*  {{ if .Site.Params.social.enable }}
+    {{ partial "social.html" . }}
+    {{ end }}  */}}
+
+    </article>
+{{ end }}
