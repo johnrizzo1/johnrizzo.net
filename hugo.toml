@@ -6,99 +6,42 @@ defaultContentLanguage = "en"
 paginate = 6
 enableEmoji = true
 
-[services]
-[services.disqus]
+# [services]
+# [services.disqus]
 # Enable Disqus comments
 # shortname = "yourdiscussshortname"
 
 [markup.highlight]
-noClasses = false
+  noClasses = false
 
 [params]
-author = "John Rizzo"
-# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "John Rizzo"
-keywords = "blog,developer,personal"
-info = ["Results-oriented, trusted leader", "Enjoys building complex distributed systems and infrastructure"]
-avatarURL = "images/avatar.jpg"
-#gravatar = "john.doe@example.com"
-dateFormat = "January 2, 2006"
-since = 2019
-# Git Commit in Footer, uncomment the line below to enable it
-commit = "https://github.com/luizdepra/hugo-coder/tree/"
-# Right To Left, shift content direction for languages such as Arabic
-rtl = false
-# Specify light/dark colorscheme
-# Supported values:
-# "auto" (use preference set by browser)
-# "dark" (dark background, light foreground)
-# "light" (light background, dark foreground) (default)
-colorScheme = "auto"
-# Hide the toggle button, along with the associated vertical divider
-hideColorSchemeToggle = false
-# Series see also post count
-maxSeeAlsoItems = 5
-# Custom CSS
-customCSS = []
-# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
-customSCSS = []
+  author = "John Rizzo"
+  description = "John Rizzo"
+  keywords = "blog,developer,personal"
+  info = [
+    "Trusted Leader | CTO | Technologist",
+    "Enjoys building complex distributed systems and infrastructure"
+  ]
+  avatarURL = "images/avatar.jpg"
+  gravatar = "johnrizzo1@gmail.com"
+  dateFormat = "January 2, 2006"
+  since = 2019
+  # commit = "https://github.com/luizdepra/hugo-coder/tree/"
+  rtl = false
+  colorScheme = "auto" # auto dark or light
+  hideColorSchemeToggle = false # Hide the toggle button, along with the associated vertical divider
+  maxSeeAlsoItems = 5 # Series see also post count
+  customCSS = []
+  customSCSS = [] # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+  customJS = []
+  customRemoteJS = [] # Custom remote JS files
 
-# Custom JS
-customJS = []
-
-# Custom remote JS files
-customRemoteJS = []
-
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
-# [params.fathomAnalytics]
-# siteID = "ABCDE"
-# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-
-# If you want to use plausible(https://plausible.io) for analytics, add this section
-# [params.plausibleAnalytics]
-# domain = "example.com"
-# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
-# outboundLinksTracking = true
-# fileDownloadsTracking = true
-
-# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
-# [params.goatCounter]
-# code = "code"
-
-# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
-# [params.cloudflare]
-# token = "token"
-
-# If you want to use Matomo(https://matomo.org) for analytics, add this section
-# [params.matomo]
-# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
-# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
+  primaryColor = "#000000"
+  textPrimaryColor = "#292929"
 
 # If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
 [params.googleTagManager]
-id = "G-C9Z8NQ33SG"
-
-# If you want to use Yandex Metrika(https://metrika.yandex.ru) for analytics, add this section
-# [params.yandexMetrika]
-# id = "gid"
-
-# If you want to use Application Insights(https://azure.com/) for analytics, add this section
-# [params.applicationInsights]
-# connectionString = "connectionString"
-
-# If you want to use microanalytics.io for analytics, add this section
-# [params.microAnalytics]
-# id = "ABCDE"
-# dnt = "false" # respect DNT tracker, "true" by default
-
-# If you want to use Pirsch(https://pirsch.io) for analytics, add this section
-# [params.pirsch]
-# code = "ABCDE"
-
-# If you want to use Umami(https://umami.is) for analytics, add this section
-# [params.umami]
-# siteID = "ABCDE"
-# scriptURL = "analytics.REGION.umami.is/SCRIPTNAME.js"
+  id = "G-C9Z8NQ33SG"
 
 # If you want to implement a Content-Security-Policy, add this section
 # [params.csp]
@@ -125,69 +68,271 @@ id = "G-C9Z8NQ33SG"
 # connectsrc = ["'self'", "https://www.google-analytics.com"]
 
 [taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
 
-[[params.social]]
-name = "Github"
-icon = "fa-brands fa-github fa-2x"
-weight = 1
-url = "https://github.com/johnrizzo1/"
+  [[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/johnrizzo1/"
 
-# [[params.social]]
-# name = "Gitlab"
-# icon = "fa-brands fa-gitlab fa-2x"
-# weight = 2
-# url = "https://gitlab.com/johnrizzo1/"
+  [[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 3
+  url = "https://twitter.com/johnrizzo1/"
 
-[[params.social]]
-name = "Twitter"
-icon = "fa-brands fa-x-twitter fa-2x"
-weight = 3
-url = "https://twitter.com/johnrizzo1/"
-
-[[params.social]]
-name = "LinkedIn"
-icon = "fa-brands fa-linkedin fa-2x"
-weight = 4
-url = "https://www.linkedin.com/in/johnrizzo1/"
-
-# [[params.social]]
-# name = "Medium"
-# icon = "fa-brands fa-medium fa-2x"
-# weight = 5
-# url = "https://medium.com/@johnrizzo1"
-
-# [[params.social]]
-# name = "RSS"
-# icon = "fa-solid fa-rss fa-2x"
-# weight = 6
-# url = "https://myhugosite.com/index.xml"
-# rel = "alternate"
-# type = "application/rss+xml"
+  [[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 4
+  url = "https://www.linkedin.com/in/johnrizzo1/"
 
 [languages.en]
-languageName = ":us:"
+  languageName = ":us:"
 
-# [[languages.en.menu.main]]
-# name = "About"
-# weight = 1
-# url = "about/"
+  # [[languages.en.menu.main]]
+  # name = "About"
+  # weight = 1
+  # url = "about/"
 
-# [[languages.en.menu.main]]
-# name = "Blog"
-# weight = 2
-# url = "posts/"
+  [[languages.en.menu.main]]
+  name = "Blog"
+  weight = 2
+  url = "posts/"
 
-# [[languages.en.menu.main]]
-# name = "Projects"
-# weight = 3
-# url = "projects/"
+  [[languages.en.menu.main]]
+  name = "CV"
+  weight = 3
+  url = "cv/"
 
-# [[languages.en.menu.main]]
-# name = "Contact me"
-# weight = 5
-# url = "contact/"
+  # [[languages.en.menu.main]]
+  # name = "Projects"
+  # weight = 3
+  # url = "projects/"
 
+  # [[languages.en.menu.main]]
+  # name = "Contact me"
+  # weight = 5
+  # url = "contact/"
+
+[params.profile]
+  enable = true
+  name = "John Rizzo"
+  tagline = "Trusted Leader | CTO | Technologist"
+  avatar = "avatar.jpg"
+
+[params.contact]
+  enable = true
+  location = "New York"
+
+  [[params.contact.list]]
+    icon = "fas fa-phone-square"
+    url = "tel:#"
+    text = "0123 4567 890"
+
+  [[params.contact.list]]
+    icon = "fas fa-envelope-square"
+    url = "mailto:#"
+    text = "simon.doe@yourwebsite.com"
+
+  [[params.contact.list]]
+    icon = "fas fa-globe"
+    url = "#"
+    text = "www.yourwebsite.com"
+
+[params.skills]
+  enable = true
+
+  [[params.skills.list]]
+  title = "Technical"
+  [[params.skills.list.items]]
+  details = "JavaScript/Angular/React/Vue"
+  [[params.skills.list.items]]
+  details = "Python/Ruby/PHP"
+  [[params.skills.list.items]]
+  details = "Node.js/ASP.NET"
+  [[params.skills.list.items]]
+  details = "PostgreSQL/MySQL"
+  [[params.skills.list.items]]
+  details = "Object-oriented design"
+  [[params.skills.list.items]]
+  details = "Design and implement database structures"
+  [[params.skills.list.items]]
+  details = "Lead and deliver complex software systems"
+
+  [[params.skills.list]]
+  title = "Professional"
+  [[params.skills.list.items]]
+  details = "Effective communication"
+  [[params.skills.list.items]]
+  details = "Team player"
+  [[params.skills.list.items]]
+  details = "Strong problem solver"
+  [[params.skills.list.items]]
+  details = "Good time management"
+
+[params.education]
+  enable = true
+
+  [[params.education.list]]
+  degree = "MSc in Computer Science"
+  university = "University College London"
+  dates = "2010 - 2011"
+
+  [[params.education.list]]
+  degree = "BSc Maths and Physics"
+  university = "Imperial College London"
+  dates = "2007 - 2010"
+
+[params.awards]
+  enable = true
+
+  [[params.awards.list]]
+  name = "Award Lorem Ipsum"
+  body = "Microsoft lorem ipsum"
+  date = "2019"
+
+  [[params.awards.list]]
+  name = "Award Donec Sodales"
+  body = "Oracle Aenean"
+  date = "2017"
+
+[params.languages]
+  enable = true
+
+  [[params.languages.list]]
+  name = "English"
+  level = "Native"
+
+  [[params.languages.list]]
+  name = "Spanish"
+  level = "Professional"
+
+[params.interests]
+  enable = true
+
+  [[params.interests.list]]
+  name = "Climbing"
+
+  [[params.interests.list]]
+  name = "Snowboarding"
+
+  [[params.interests.list]]
+  name = "Photography"
+
+  [[params.interests.list]]
+  name = "Travelling"
+
+[params.summary]
+  enable = true
+  text = "Summarise your career here. Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."
+
+[params.experience]
+  enable = true
+
+  [[params.experience.list]]
+  title = "Senior Software Engineer"
+  dates = "2019 - Present"
+  company = "Google"
+  details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis."
+
+  [[params.experience.list.items]]
+  details = "Lorem ipsum dolor sit amet, consectetuer."
+
+  [[params.experience.list.items]]
+  details = "Aenean commodo ligula eget dolor."
+
+  [[params.experience.list.items]]
+  details = "Etiam ultricies nisi vel augue."
+
+  [[params.experience.list]]
+  title = "Lead Software Developer"
+  dates = "2016 - 2019"
+  company = "Apple"
+  details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel."
+
+  [[params.experience.list.items]]
+  details = "Lorem ipsum dolor sit amet, consectetuer."
+  
+  [[params.experience.list.items]]
+  details = "Aenean commodo ligula eget dolor."
+
+  [[params.experience.list]]
+  title = "Senior Software Developer"
+  dates = "2014 - 2016"
+  company = "Dropbox"
+  details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+
+  [[params.experience.list]]
+  title = "Senior Developer"
+  dates = "2013 - 2014"
+  company = "Uber"
+  details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus."
+
+  [[params.experience.list]]
+  title = "Backend Developer"
+  dates = "2014 - 2016"
+  company = "Amazon"
+  details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+
+  [[params.experience.list]]
+  title = "Frontend Developer"
+  dates = "2013 - 2014"
+  company = "Startup"
+  details = "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus."
+
+[params.projects]
+  enable = true
+
+  [[params.projects.list]]
+  title = "Project Lorem Ipsum"
+  meta = "Open Source"
+  tagline = "You can use this section for your side projects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+
+  [[params.projects.list]]
+  title = "Project Sed Fringilla"
+  meta = "Open Source"
+  tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+
+  [[params.projects.list]]
+  title = "Project Praesent"
+  meta = "Open Source"
+  tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+
+[params.information]
+  enable = true
+
+  [[params.information.list]]
+  title = "Papers"
+
+  [[params.information.list.items]]
+  details = "2018 · Lorem Ipsum"
+  
+  [[params.information.list.items]]
+  details = "2016 · Sed Fringilla"
+
+  [[params.information.list]]
+  title = "Interests"
+  details = "Climbing, Snowboarding, Photography, Travelling"
+
+# [params.social]
+#   enable = true
+
+#   [[params.social.list]]
+#   icon = "fab fa-github-square"
+#   url = "//github.com/username"
+#   title = "username"
+
+#   [[params.social.list]]
+#   icon = "fab fa-linkedin"
+#   url = "//linkedin.com/in/username"
+#   title = "username"
+
+#   [[params.social.list]]
+#   icon = "fab fa-twitter-square"
+#   url = "//twitter.com/username"
+#   title = "@username"

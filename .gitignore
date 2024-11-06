@@ -8,3 +8,14 @@ devenv.local.nix
 
 # pre-commit
 .pre-commit-config.yaml
+
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+# Temporary lock file while building
+/.hugo_build.lock
+
+.idea
+**/themes/
+*.lock
