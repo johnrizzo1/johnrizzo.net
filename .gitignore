@@ -14,7 +14,7 @@ devenv.local.nix
 /assets/jsconfig.json
 hugo_stats.json
 # Temporary lock file while building
-/.hugo_build.lock
+.hugo_build.lock
 
 .idea
 **/themes/
