@@ -25,9 +25,9 @@ languages:
         # - name: "Blog"
         #   weight: 2
         #   url: "posts/"
-        - name: "CV"
-          weight: 3
-          url: "cv/"
+        # - name: "CV"
+        #   weight: 3
+        #   url: "cv/"
 params:
   author: "John Rizzo"
   description: "John Rizzo"
@@ -53,6 +53,7 @@ params:
   googleTagManager:
     # If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
     id: "G-C9Z8NQ33SG"
+  # Resume Params
   social:
     - name: "Github"
       icon: "fa-brands fa-github fa-2x"
@@ -110,9 +111,9 @@ params:
   education:
     enable: true
     list:
-      - degree: MSc / PhD in Computer Science
-        university: Stevens Institute of Technology
-        dates: 2004 - Present
+      # - degree: MSc / PhD in Computer Science
+      #   university: Stevens Institute of Technology
+      #   dates: 2024 - Present
       - degree: BS in Computer Science
         university: New Jersey Institute of Technology
         dates: 1998 - 2002
