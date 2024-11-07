@@ -3,7 +3,9 @@ title: "jNet"
 theme: "jnet"
 languageCode: "en"
 defaultContentLanguage: "en"
-paginate: 6
+# paginate: 6
+pagination:
+  pagerSize: 6
 enableEmoji: true
 markup:
   highlight:
@@ -248,5 +250,13 @@ params:
       - title: Interests
         items:
           - details: Hiking, Nature, Science, Photography, Traveling
-    
+outputs:
+  home:
+    - html
+  section:
+    - html
+  taxonomy:
+    - html
+  term:
+    - html
 
