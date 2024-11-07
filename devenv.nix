@@ -1,19 +1,21 @@
 { pkgs, lib, config, inputs, ... }:
-
+let 
+  pkgs-unstable = import inputs.nixpkgs-unstable { system = pkgs.stdenv.system; };
+in
 {
-  env.GREET = "jmclothingmfr.com dev environment";
-  packages = [ pkgs.git pkgs.hugo ];
+  languages.nix.enable = true;
+  languages.javascript.enable = true;
+  languages.javascript.npm.enable = true;
+  languages.typescript.enable = true;
+  languages.go.enable = true;
+
+  packages = [ pkgs.git pkgs-unstable.hugo ];
   enterShell = ''
     git --version
   '';
   enterTest = ''
     echo "Running tests"
-    git --version | grep "2.42.0"
+    git --version | grep --color=auto "${pkgs.git.version}"
   '';
-  languages.nix.enable = true;
-  languages.javascript.enable = true;
-  languages.javascript.npm.enable = true;
-  languages.typescript.enable = true;
-
   # See full reference at https://devenv.sh/reference/options/
 }
