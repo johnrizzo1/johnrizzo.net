@@ -41,10 +41,9 @@ $theme-colors: (
 
 /*********** Theme Generic **********/
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: $theme-text-color-secondary;
-
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $theme-text-color-secondary;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -94,37 +93,41 @@ a.theme-link {
 .resume-section-heading {
 	position: relative;
 	padding-left: 1rem;
-	font-size: 1.75rem;
+	font-size: 2.00rem;
+	// font-size: 1.75rem;
 	letter-spacing: 0.15rem;
-	color: $theme-color-primary;
-   &:before {
-	   content: "";
+	// color: $theme-color-primary;
+  color: rgba(0, 40, 100, 0.8);
+    &:before {
+	    content: "";
 	    display: inline-block;
 	    width: 5px;
 	    height: 100%;
-	    background: $theme-color-primary;
+	    // background: $theme-color-primary;
+	    background: rgba(0, 40, 100, 0.8);
 	    position: absolute;
 	    left: 0;
 	    top: 0;
-   }
+    }
 }
 
 .resume-name {
-	font-size: 2.75rem;
+	// font-size: 3.75rem;
+	font-size: 4.00rem;
 	font-weight: 900;
 	letter-spacing: 0.4rem;
 	color: $theme-color-primary;
-
 }
 
 .resume-tagline {
-	font-size: 1.75rem;
+	// font-size: 1.75rem;
+	font-size: 2.00rem;
 	font-weight: 300;
 }
 
 .resume-contact {
 	border-left: 1px solid rgba(0, 0, 0, 0.08);
-	font-size: 1.00rem;
+	font-size: 1.50rem;
 }
 
 a.resume-link {
@@ -140,49 +143,52 @@ a.resume-link {
 }
 
 .resume-intro {
-	font-size: 1.500rem;
+	// font-size: 1.500rem;
+	font-size: 1.75rem;
 }
 .resume-main {
 	.item-title {
-		font-size: 1.50rem;
+		font-size: 1.70rem;
 	}
   .item-meta {
-	  font-size: 1.25rem;
+    font-size: 1.50rem;
   }
   .item-content {
-		font-size: 1.5rem;
+		font-size: 1.50rem;
 	}
 }
 
 .resume-aside {
 	border-left: 1px solid rgba(0, 0, 0, 0.08);
 	.item {
-		font-size: 1.25rem;
-	}
-	.item-title {
+		// font-size: 1.25rem;
 		font-size: 1.50rem;
 	}
-
+	.item-title {
+		// font-size: 1.50rem;
+		font-size: 1.750rem;
+	}
 }
-
 
 .resume-education-list, .resume-awards-list {
-    font-size: 1.5rem;
+  // font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
-
 .resume-degree-time-org, .resume-degree-time {
-	font-size: 1.00rem;
+	// font-size: 1.00rem;
+	font-size: 1.25rem;
 }
 
 .resume-lang-list, .resume-interests-list {
-	font-size: 1.5rem;
+	// font-size: 1.5rem;
+	font-size: 1.75rem;
 }
 
 .resume-social-list {
-	font-size: 0.75rem;
+	// font-size: 0.75rem;
+	font-size: 1.00rem;
 }
-
 
 .fa-heart {
 	color: #fb866a;
@@ -190,18 +196,16 @@ a.resume-link {
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-
-    .resume-aside {
-	    border-left: 0;
-    }
+  .resume-aside {
+    border-left: 0;
+  }
 }
-
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 	.resume-contact {
-	    border-left: 0;
-    }
+    border-left: 0;
+  }
 }
 
 

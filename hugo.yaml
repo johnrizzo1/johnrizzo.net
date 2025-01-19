@@ -25,9 +25,9 @@ languages:
         # - name: "Blog"
         #   weight: 2
         #   url: "posts/"
-        # - name: "CV"
-        #   weight: 3
-        #   url: "cv/"
+        - name: "CV"
+          weight: 3
+          url: "cv/"
 params:
   author: "John Rizzo"
   description: "John Rizzo"
@@ -36,19 +36,20 @@ params:
     - "Trusted Leader | CTO | Technologist"
     - "Enjoys building complex distributed systems and infrastructure"
   avatarURL: "images/avatar.jpg"
-  # gravatar: "johnrizzo1@gmail.com"
+  # gravatar: "me@me.com"
   dateFormat: "January 2, 2006"
   since: 1995
   # commit: "https://github.com/luizdepra/hugo-coder/tree/"
   rtl: false
-  colorScheme: "auto" # auto dark or light
+  colorScheme: "light" # auto dark or light
   hideColorSchemeToggle: false # Hide the toggle button, along with the associated vertical divider
   maxSeeAlsoItems: 5 # Series see also post count
   customCSS: []
   customSCSS: [] # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
   customJS: []
   customRemoteJS: [] # Custom remote JS files
-  primaryColor: "#000000"
+  # primaryColor: "#000000"
+  primaryColor: rgba(0, 40, 100, 0.8);
   textPrimaryColor: "#292929"
   googleTagManager:
     # If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
@@ -111,9 +112,9 @@ params:
   education:
     enable: true
     list:
-      # - degree: MSc / PhD in Computer Science
-      #   university: Stevens Institute of Technology
-      #   dates: 2024 - Present
+      - degree: MS in Computer Science, Machine Learning
+        university: Stevens Institute of Technology
+        dates: 2024 - Present
       - degree: BS in Computer Science
         university: New Jersey Institute of Technology
         dates: 1998 - 2002
@@ -148,90 +149,90 @@ params:
         dates: August 2018 - August 2024
         details: Developed and executed a Vision and Strategy as Product Owner for Compute Access Control, Endpoint Security Tooling, and Identity and Access Management. These tools supported over 10k+ people geographically distributed around the globe improving the security of our endpoints, ease of accessing resources, and supporting advanced authentication and authorization scenarios.
         items:
-          - details: Developed a set of capabilities that allow Bloomberg to replay the interaction between systems as well as the activity on any of our servers for incident response and post incident analysis.
-          - details: Developed a set of capabilities that helped to support and enable our data science platform “BQuant” to leverage and the query language “BQL” to support multi-tenant Machine Learning and Data Science initiatives.
-          - details: Led numerous projects related to the overlap of Developer Experience and Information Security providing a secure multi-protocol channel for a Google “Beyond” style development environment.
-          - details: Developed Proof of Concepts for various systems, many of which have transitioned into production technologies that have improved our security posture.
-          - details: Led the effort to efficiently collect process and network events on over 150k+ systems using both kernel techniques leveraging eBPF as well as netflow/ipfix data collection using commercial optical taps, resulting in more than 300TB of data collected per day. This information is then used for detection, remediation and post incident analysis of security events.
+          # - details: Developed a set of capabilities that allow Bloomberg to replay the interaction between systems as well as the activity on any of our servers for incident response and post incident analysis.
+          # - details: Developed a set of capabilities that helped to support and enable our data science platform “BQuant” to leverage and the query language “BQL” to support multi-tenant Machine Learning and Data Science initiatives.
+          # - details: Led numerous projects related to the overlap of Developer Experience and Information Security providing a secure multi-protocol channel for a Google “Beyond” style development environment.
+          # - details: Developed Proof of Concepts for various systems, many of which have transitioned into production technologies that have improved our security posture.
+          # - details: Led the effort to efficiently collect process and network events on over 150k+ systems using both kernel techniques leveraging eBPF as well as netflow/ipfix data collection using commercial optical taps, resulting in more than 300TB of data collected per day. This information is then used for detection, remediation and post incident analysis of security events.
       - company: Caxton Associates
         title: Head of Public Cloud / DevOps
         dates: November 2016 - November 2018
         details: Caxton Associates is the flagship hedge fund founded by Bruce Kovner. Built an infrastructure practice focused on cloud technologies and cloud native software architecture.
         items:
-          - details: Supported the firms “Cloud Native” initiatives through the design and implementation of a cloud-based infrastructure strategy as well as the tools necessary to support this infrastructure.
-          - details: Built core technology stack and IAM components of firm's next generation front to back trading and operational infrastructure.
-          - details: Implemented a modular terraform, ansible and Jenkins based IaC and CI/CD stack enabling development teams to rapidly test their application in a disposable environment.
-          - details: Improved the quality of internally developed software systems through implementation of development best practices and an agile development methodology resulting in higher quality and timeline software delivery.
-          - details: Supported development teams by creating a follow the sun model of offshore Development and DevOps teams.
+          # - details: Supported the firms “Cloud Native” initiatives through the design and implementation of a cloud-based infrastructure strategy as well as the tools necessary to support this infrastructure.
+          # - details: Built core technology stack and IAM components of firm's next generation front to back trading and operational infrastructure.
+          # - details: Implemented a modular terraform, ansible and Jenkins based IaC and CI/CD stack enabling development teams to rapidly test their application in a disposable environment.
+          # - details: Improved the quality of internally developed software systems through implementation of development best practices and an agile development methodology resulting in higher quality and timeline software delivery.
+          # - details: Supported development teams by creating a follow the sun model of offshore Development and DevOps teams.
       - company: Caxton Alternative Management
         title: Director of Technology
         dates: December 2013 - November 2016
         details: Caxton Alternative Management was created as the family office in support of the Kovner Family. Created an independent technology team and infrastructure that supported the family office and the Kovner Family directly.
         items:
-          - details: Led the technology efforts necessary to construct two entirely new offices in New York and Florida.
-          - details: Developed an independent technology infrastructure in support of a global network of locations used by the Kovner Family as well as the staff supporting the tax, accounting and trading needs of the family.
+          # - details: Led the technology efforts necessary to construct two entirely new offices in New York and Florida.
+          # - details: Developed an independent technology infrastructure in support of a global network of locations used by the Kovner Family as well as the staff supporting the tax, accounting and trading needs of the family.
       - company: Salesforce.com
         title: Practice Director
         dates: April 2012 - December 2013
         details: Salesforce.com is the leading provider of cloud computing SaaS, PaaS, and IaaS solutions. I was hired to support their aggressive growth targets by providing leadership and helping to build and manage a part of their services offerings in the northeast of the US.
         items:
-          - details: Determined annual objectives, metrics, and organizational methods for meeting those objectives and metrics.
-          - details: Grew the services arm by working directly with human resources to develop a sustainable hiring model as well as career path and personnel development strategy.
-          - details: Developed strategic contributions in combination with the product development teams to incorporate on the ground experience with the overall product development roadmap.
-          - details: Contributed as a senior leader on the most strategic accounts to ensure their success.
+          # - details: Determined annual objectives, metrics, and organizational methods for meeting those objectives and metrics.
+          # - details: Grew the services arm by working directly with human resources to develop a sustainable hiring model as well as career path and personnel development strategy.
+          # - details: Developed strategic contributions in combination with the product development teams to incorporate on the ground experience with the overall product development roadmap.
+          # - details: Contributed as a senior leader on the most strategic accounts to ensure their success.
       - company: Credit Market Analysis Ltd (CMA)
         title: Chief Technology Officer
         dates: July 2011 - April 2012
         details: The CMA has developed market-leading software to assist its clients with price discovery, independent valuations, and consensus-based pricing of over the counter (OTC) credit instruments. I was hired to provide leadership and product vision for the development of these products as well as the underlying infrastructure used to provide these products to its clients as an ASP solution.
         items:
-          - details: Developed the technology vision in alignment with the broader business strategy.
-          - details: Provided leadership to the software architects to create synergies across the products.
-          - details: Aligned the software architecture with the technology infrastructure in a way that optimizes the investment in a highly virtualized datacenter.
-          - details: Worked with the business to leverage offshore resources to gain leverage across the development, quality and infrastructure teams.
-          - details: Created offshore development and infrastructure practice of 12 people to support the onshore teams.
+          # - details: Developed the technology vision in alignment with the broader business strategy.
+          # - details: Provided leadership to the software architects to create synergies across the products.
+          # - details: Aligned the software architecture with the technology infrastructure in a way that optimizes the investment in a highly virtualized datacenter.
+          # - details: Worked with the business to leverage offshore resources to gain leverage across the development, quality and infrastructure teams.
+          # - details: Created offshore development and infrastructure practice of 12 people to support the onshore teams.
       - company: Paladyne Systems, Inc.
         title: Vice President
         dates: September 2009 - July 2011
         details: After the acquisition of Oakwood Financial Technologies, I was retained to ease the transition, train, and assist with sales and marketing and continue to drive the firms focus on the bank debt markets. Key to integrating with Paladyne was the successful growth of the team and integration with Paladyne’s offshore development team.
         items:
-          - details: Integrated the acquired team with the rest of Paladyne’s organization including sales, product management, information technology and software development.
-          - details: Integrated the newly renamed Credit Master product with the entire Paladyne Software Suite.
-          - details: Identify and negotiate all partnerships related to the Credit Master product.
-          - details: Assisted with the marketing effort through the publication of various articles, most noticeably, “Bank Debt Deals Post Operational Risk”, published by Wall Street & Technology on March 16, 2010.
+          # - details: Integrated the acquired team with the rest of Paladyne’s organization including sales, product management, information technology and software development.
+          # - details: Integrated the newly renamed Credit Master product with the entire Paladyne Software Suite.
+          # - details: Identify and negotiate all partnerships related to the Credit Master product.
+          # - details: Assisted with the marketing effort through the publication of various articles, most noticeably, “Bank Debt Deals Post Operational Risk”, published by Wall Street & Technology on March 16, 2010.
       - company: Oakwood Financial Technologies
         title: President & CEO
         dates: September 2007 - September 2009
         details: Founder for designing and implementing the corporate strategy around the development of Credit Desk for managing all aspects of the credit life cycle after establishing a strategic relationship with several large multi-billion dollar hedge funds who are actively involved in the industry. Following its initial success, the company was acquired by Paladyne Systems, Inc.
         items:
-          - details: Generated over $1MM in revenue in the first year and successfully managed the marketing and acquisition of the company by Paladyne Systems, Inc.
-          - details: Managed all Human Resources functions such as Payroll and Healthcare.
-          - details: Managed marketing efforts including preparing the marketing material.
-          - details: Identified all sales including lead generation, engagement through to a successful conclusion.
-          - details: Primary architect and designer of the flagship product, Credit Master.
-          - details: Implemented Agile development practices focused on rapid development and quick turnaround as appropriate for a maturing product.
-          - details: Implemented QA processes to ensure that all development produced results in line with their specifications as well as to reduce the introduction of errors and regressions in performance and functionality.
+          # - details: Generated over $1MM in revenue in the first year and successfully managed the marketing and acquisition of the company by Paladyne Systems, Inc.
+          # - details: Managed all Human Resources functions such as Payroll and Healthcare.
+          # - details: Managed marketing efforts including preparing the marketing material.
+          # - details: Identified all sales including lead generation, engagement through to a successful conclusion.
+          # - details: Primary architect and designer of the flagship product, Credit Master.
+          # - details: Implemented Agile development practices focused on rapid development and quick turnaround as appropriate for a maturing product.
+          # - details: Implemented QA processes to ensure that all development produced results in line with their specifications as well as to reduce the introduction of errors and regressions in performance and functionality.
       - company: D.B. Zwirn & Co.
         title: Chief Technology Officer
         dates: January 2004 - July 2007
         details: Directed technology and software development across a $7 billion, 250+ employee, global multi-strategy hedge fund focusing on originated structured products, structured credit, commodities, illiquid and liquid trading for domestic, European, and Asian markets. Held autonomous decision-making authority for all IT development and expansion issues, with a focus on IT organization design, voice and data communications, system integration, emerging technologies, enterprise architectures, data center operations, strategic alliances, and data security. Manage 7 direct and 35 indirect professionals across 13 locations in 10 countries with a $25 million operating/capital budget.
         items:
-          - details: Built seventeen offices around the globe of which twelve offices were fully constructed and five were negotiated servicing offices. Three of the primary offices required additional expansion to handle capacity. This project required managing contractors and architects as well as dealing with import/export restrictions and various cultural details.
-          - details: Developed Joint Venture, Deal, and Loan management system integrated with the fund accounting system. This system allowed for more detailed management and monitoring of hundreds of structured investments and direct loans. This system was developed by utilizing the Java J2EE stack of technologies as well as C# and web services to integrate with other systems.
-          - details: Implemented complete STP architecture, which included several order management and trade entry applications, electronic execution, real-time confirmation and settlement, compliance, as well as portfolio management and accounting systems. These systems allowed the firm to handle an increased volume of trading while significantly reducing operational errors and costs and at the same time increasing productivity.
-          - details: Integrated various third-party systems for performing risk assessment and valuation. This system was accessible through excel for custom analysis and via an API for use in other enterprise systems.
-          - details: Developed a centralized reference data master for maintaining various sources of market data and reference data used by various third-party systems. This system helped maintain consistency across third party applications and simplified the management of this data by automating much of the creation and updating of reference information.
-          - details: Incorporated compliance policies and rules into all applications throughout the firm. This required building several custom systems as well as enhancing many of the existing systems to monitor and enforce the compliance policies.
-          - details: Worked with IT and development leads to implement governance practices based on ITIL practices and recommendations.
+          # - details: Built seventeen offices around the globe of which twelve offices were fully constructed and five were negotiated servicing offices. Three of the primary offices required additional expansion to handle capacity. This project required managing contractors and architects as well as dealing with import/export restrictions and various cultural details.
+          # - details: Developed Joint Venture, Deal, and Loan management system integrated with the fund accounting system. This system allowed for more detailed management and monitoring of hundreds of structured investments and direct loans. This system was developed by utilizing the Java J2EE stack of technologies as well as C# and web services to integrate with other systems.
+          # - details: Implemented complete STP architecture, which included several order management and trade entry applications, electronic execution, real-time confirmation and settlement, compliance, as well as portfolio management and accounting systems. These systems allowed the firm to handle an increased volume of trading while significantly reducing operational errors and costs and at the same time increasing productivity.
+          # - details: Integrated various third-party systems for performing risk assessment and valuation. This system was accessible through excel for custom analysis and via an API for use in other enterprise systems.
+          # - details: Developed a centralized reference data master for maintaining various sources of market data and reference data used by various third-party systems. This system helped maintain consistency across third party applications and simplified the management of this data by automating much of the creation and updating of reference information.
+          # - details: Incorporated compliance policies and rules into all applications throughout the firm. This required building several custom systems as well as enhancing many of the existing systems to monitor and enforce the compliance policies.
+          # - details: Worked with IT and development leads to implement governance practices based on ITIL practices and recommendations.
       - company: Highbridge Capital Management
         title: Director of Technology Operations
         dates: November 2002 - January 2004
         details: Technical advisor to the CTO and Statistical Arbitrage team.
         items:
-          - details: Improved client support through the implementation of various policies and changes to the support process.
-          - details: Directly supported multiple trading strategies and implemented and supported trading applications such as Bloomberg, Reuters, and VPM.
-          - details: Deployed and maintained various core services such as DNS, Veritas NetBackup, Exchange, Active Directory, and Network Storage.
-          - details: Performed critical upgrades such as moving from Solaris 8 to Solaris 9 and Solaris to Linux.
-          - details: Helped develop an automated build environment for the RedHat based servers.
+          # - details: Improved client support through the implementation of various policies and changes to the support process.
+          # - details: Directly supported multiple trading strategies and implemented and supported trading applications such as Bloomberg, Reuters, and VPM.
+          # - details: Deployed and maintained various core services such as DNS, Veritas NetBackup, Exchange, Active Directory, and Network Storage.
+          # - details: Performed critical upgrades such as moving from Solaris 8 to Solaris 9 and Solaris to Linux.
+          # - details: Helped develop an automated build environment for the RedHat based servers.
       - company: Qwest Internet Solutions
         title: Hosting Engineering
         dates: February 1999 - January 2002
@@ -248,9 +249,9 @@ params:
         items:
           - details: "Reviewer of 'Learn Algorithmic Trading: Build and deploy algorithmic trading systems and strategies using Python and advanced data analysis 1st Edition' by Sebastian Donadio ISBN 13: 978-1789348347"
           - details: Bank Debt Deals Post Operational Risk, by John Rizzo, published by Wall Street & Technology on March 16, 2010.
-      - title: Interests
-        items:
-          - details: Hiking, Nature, Science, Photography, Traveling
+      # - title: Interests
+      #   items:
+      #     - details: Hiking, Nature, Science, Photography, Traveling
 outputs:
   home:
     - html
