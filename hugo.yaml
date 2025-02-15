@@ -22,9 +22,9 @@ languages:
         - name: "Home"
           weight: 1
           url: "/"
-        # - name: "Blog"
-        #   weight: 2
-        #   url: "posts/"
+        - name: "Blog"
+          weight: 2
+          url: "posts/"
         - name: "CV"
           weight: 3
           url: "cv/"

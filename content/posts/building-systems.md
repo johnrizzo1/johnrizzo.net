@@ -1,5 +1,5 @@
 +++
-draft = false
+draft = true
 authors = ["John Rizzo"]
 title = "Building Systems"
 slug = "building-systems"
