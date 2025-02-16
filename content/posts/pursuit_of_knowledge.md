@@ -25,7 +25,7 @@ Given my background in Computer Science and the rapid advancements in Artificial
 
 ## Why AI, and Why Now?
 
-I have followed AI developments for a long time but, until recently, did not see enough practical applications to justify a significant investment of my time. That has certainly changed—or has it?
+I have followed AI developments for a long time but, until recently, did not see enough practical applications to justify a significant investment of my time. That has certainly changed?
 
 The question I am exploring is: _What can we do with AI today?_ Not in some distant future where AI rules the world, but in the present—what real-world applications are already making an impact? Here are some of the most practical and successful use cases for AI today:
 
