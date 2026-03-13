@@ -1,0 +1,35 @@
+# johnrizzo.net
+
+> Personal website and blog of John Rizzo — Trusted Leader, CTO, and Technologist.
+
+John Rizzo is a technology leader with experience in building complex distributed systems, infrastructure, and security. He is currently pursuing a Master's degree in Computer Science with a focus on AI at Stevens Institute of Technology.
+
+## Site Sections
+
+- [Home](https://www.johnrizzo.net/)
+- [Blog](https://www.johnrizzo.net/posts/)
+- [CV](https://www.johnrizzo.net/cv/)
+- [About](https://www.johnrizzo.net/about/)
+
+## Blog Posts
+
+- [A Simple S3 Client](https://www.johnrizzo.net/posts/simples3/): A lightweight, cross-platform graphical S3 client built with Tauri and Rust. Supports AWS S3, MinIO, Backblaze B2, Cloudflare R2, and any S3-compatible service.
+- [Enabling AI with Kubernetes MCP Server](https://www.johnrizzo.net/posts/kubernetes_mcp_server/): A Kubernetes MCP server built with Python and Flask that allows AI tools like Claude Code to interact with Kubernetes clusters.
+- [Learning Data Science through Koans](https://www.johnrizzo.net/posts/data_science_koans/): A set of hands-on exercises inspired by programming koans to teach data science concepts including data cleaning, visualization, statistical analysis, and machine learning.
+- [The Pursuit of Understanding and My AI Journey](https://www.johnrizzo.net/posts/pursuit_of_knowledge/): Reflections on pursuing a Master's in Computer Science with a focus on AI, and a survey of practical AI applications across industries.
+
+## About the Author
+
+John Rizzo is an energetic, innovative technology leader experienced in designing and delivering high-performance technology solutions. His career includes roles as CTO at multiple companies, including Bloomberg LP (CTO Security Architect), and founding partner of Cognitive Ventures. He has deep expertise in cloud infrastructure (AWS, Azure, GCP), security, distributed systems, and AI/ML.
+
+## Open Source Projects
+
+- [Simple S3](https://github.com/johnrizzo1/simples3) - A lightweight S3 file manager built with Tauri and Rust
+- [UberMCP](https://github.com/johnrizzo1/ubermcp) - A Kubernetes MCP server for AI tool integration
+- [Data Science Koans](https://github.com/johnrizzo1/ds-koans) - Hands-on exercises for learning data science
+
+## Social Links
+
+- [GitHub](https://github.com/johnrizzo1/)
+- [LinkedIn](https://www.linkedin.com/in/johnrizzo1/)
+- [Twitter/X](https://twitter.com/johnrizzo1/)

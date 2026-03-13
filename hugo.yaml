@@ -206,6 +206,7 @@ params:
 outputs:
   home:
     - html
+    - sitemap
   section:
     - html
   taxonomy:
