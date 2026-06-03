@@ -140,7 +140,7 @@ params:
       - name: My Family
   summary:
     enable: true
-    text: Energetic, innovative and accomplished technology leader experienced in the design and delivery of cost-effective, high-performance technology solutions. Highly skilled in all phases of the product life cycle, from initial feasibility analysis and design through implementation and ongoing operations. Effective at building highly performing, culturally diverse, teams.
+    text: Energetic, innovative and accomplished technology leader experienced in the design and delivery of cost-effective, high-performance technology solutions. Highly skilled in all phases of the product life cycle, from initial feasibility analysis and design through implementation and ongoing operations. Effective at building high performing, culturally diverse, teams.
   experience:
     enable: true
     list:
