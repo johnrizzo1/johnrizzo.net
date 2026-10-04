@@ -10,6 +10,21 @@ enableEmoji: true
 markup:
   highlight:
     noClasses: false
+  goldmark:
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - - '$$'
+              - '$$'
+            - - '\['
+              - '\]'
+          inline:
+            - - '$'
+              - '$'
+            - - '\('
+              - '\)'
 taxonomies:
   category: "categories"
   series: "series"
@@ -29,6 +44,7 @@ languages:
           weight: 3
           url: "cv/"
 params:
+  math: true
   author: "John Rizzo"
   description: "John Rizzo"
   keywords: "blog,developer,personal"

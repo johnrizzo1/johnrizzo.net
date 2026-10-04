@@ -11,7 +11,21 @@ in
     languages.typescript.enable = true;
     languages.go.enable = true;
 
-    packages = [ pkgs.git pkgs-unstable.hugo pkgs.python3Packages.jupyter];
+    packages = [
+        pkgs.git
+        pkgs-unstable.hugo
+    ] ++ (with pkgs.python3Packages; [
+        jupyter
+        marimo
+        gensim
+        ipython
+        matplotlib
+        nltk
+        numpy
+        pandas
+        scikit-learn
+        tabulate
+    ]);
     enterShell = ''
         git --version
     '';
