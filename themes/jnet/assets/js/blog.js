@@ -213,11 +213,15 @@
       const sidebar = document.querySelector('.sidebar-toc');
       if (!sidebar) return;
 
-      const sidebarRect = sidebar.getBoundingClientRect();
-      const linkRect = link.getBoundingClientRect();
+      const linkTop = link.offsetTop;
+      const linkHeight = link.offsetHeight;
+      const sidebarScrollTop = sidebar.scrollTop;
+      const sidebarHeight = sidebar.clientHeight;
 
-      if (linkRect.top < sidebarRect.top || linkRect.bottom > sidebarRect.bottom) {
-        link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      if (linkTop < sidebarScrollTop) {
+        sidebar.scrollTop = Math.max(0, linkTop - 12);
+      } else if (linkTop + linkHeight > sidebarScrollTop + sidebarHeight) {
+        sidebar.scrollTop = linkTop + linkHeight - sidebarHeight + 12;
       }
     }
 
