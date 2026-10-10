@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 authors = ["John Rizzo"]
 title = "Sentiment Analysis with NLP: From Co-Occurrence SVD to GloVe and Neural Classifiers"
 date = "2026-10-04"
@@ -472,4 +472,4 @@ To advance beyond this baseline:
 
 ---
 
-*The full executable source code and reactive notebook for this project is available in [`nlp_sentiment_analysis.py`](nlp_sentiment_analysis.py).*
+*The full executable source code and reactive notebook for this project is available in [`nlp_sentiment_analysis.py`](nlp_sentiment_analysis.py) and the data is [`amazon_reviews.csv`](amazon_reviews.csv).*
