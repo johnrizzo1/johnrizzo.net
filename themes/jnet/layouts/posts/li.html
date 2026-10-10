@@ -1,4 +1,53 @@
-<li>
-  <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
-  <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
-</li>
+<article class="post-card">
+  <div class="post-card-meta">
+    <span class="post-card-date">
+      <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+      </time>
+    </span>
+    <span class="post-card-reading-time">
+      <i class="fa-solid fa-clock" aria-hidden="true"></i>
+      {{ i18n "reading_time" .ReadingTime }}
+    </span>
+    {{ with .GetTerms "categories" }}
+      <span class="post-card-categories">
+        {{ range first 2 . }}
+          <span class="card-badge-category">{{ .LinkTitle }}</span>
+        {{ end }}
+      </span>
+    {{ end }}
+  </div>
+
+  <h2 class="post-card-title">
+    <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+  </h2>
+
+  {{ $summary := "" }}
+  {{ with .Description }}
+    {{ $summary = . }}
+  {{ else with .Summary }}
+    {{ $summary = . | plainify }}
+    {{ $summary = replaceRE `(?i)^.*?Link to heading\s*` "" $summary }}
+    {{ $summary = $summary | chomp | truncate 180 }}
+  {{ end }}
+  {{ if $summary }}
+    <p class="post-card-summary">
+      {{ $summary }}
+    </p>
+  {{ end }}
+
+  <div class="post-card-footer">
+    <a href="{{ .Params.externalLink | default .RelPermalink }}" class="post-card-readmore">
+      <span>Read article</span>
+      <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+    </a>
+    {{ with .GetTerms "tags" }}
+      <div class="post-card-tags">
+        {{ range first 3 . }}
+          <span class="card-tag">#{{ .LinkTitle }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</article>

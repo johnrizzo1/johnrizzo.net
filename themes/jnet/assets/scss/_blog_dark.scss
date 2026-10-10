@@ -1,0 +1,150 @@
+// ==============================================================================
+// Modern Minimalist Blog Theme - Dark Mode Overrides
+// ==============================================================================
+
+@mixin blog_dark {
+  --blog-primary: #38bdf8;
+  --blog-primary-hover: #7dd3fc;
+  --blog-primary-subtle: rgba(56, 189, 248, 0.1);
+  --blog-primary-border: rgba(56, 189, 248, 0.28);
+  --blog-text-main: #e2e8f0;
+  --blog-text-muted: #94a3b8;
+  --blog-text-light: #64748b;
+  --blog-border: #232d3f;
+  --blog-border-subtle: #182030;
+  --blog-card-bg: #141b27;
+  --blog-card-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --blog-code-bg: #0d1117;
+  --blog-code-border: #30363d;
+  --blog-code-header-bg: #161b22;
+  --blog-code-header-text: #8b949e;
+  --blog-code-copy-border: #30363d;
+  --blog-code-copy-text: #8b949e;
+  --blog-code-copy-hover-bg: #21262d;
+  --blog-inline-code-bg: #1e2638;
+  --blog-inline-code-border: #2c3850;
+  --blog-inline-code-text: #f1f5f9;
+
+  .reading-progress-bar {
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+  }
+
+  .post-header {
+    border-bottom-color: var(--blog-border);
+  }
+
+  .post-content {
+    color: var(--blog-text-main);
+
+    h2, h3, h4 {
+      color: #f8fafc;
+    }
+
+    h2::before {
+      background-color: var(--blog-primary);
+    }
+
+    blockquote {
+      border-left-color: var(--blog-primary);
+      background-color: var(--blog-primary-subtle);
+      color: #cbd5e1;
+    }
+
+    ol li::marker {
+      color: var(--blog-primary);
+    }
+
+    table {
+      border-color: var(--blog-border);
+
+      th {
+        background-color: var(--blog-border-subtle);
+        color: #f8fafc;
+        border-bottom-color: var(--blog-border);
+      }
+
+      td {
+        border-bottom-color: var(--blog-border);
+        color: var(--blog-text-main);
+      }
+
+      tr:hover td {
+        background-color: var(--blog-primary-subtle);
+      }
+    }
+
+    hr {
+      background: linear-gradient(90deg, transparent, var(--blog-border), transparent);
+    }
+  }
+
+  .post-sidebar .sticky-sidebar-wrapper {
+    background-color: var(--blog-card-bg);
+    border-color: var(--blog-border);
+  }
+
+  .post-sidebar .sidebar-toc nav#TableOfContents ul li a {
+    color: var(--blog-text-muted);
+
+    &:hover {
+      color: var(--blog-primary);
+      background-color: var(--blog-primary-subtle);
+    }
+
+    &.active {
+      color: #ffffff;
+      border-left-color: var(--blog-primary);
+      background-color: var(--blog-primary-subtle);
+    }
+  }
+
+  .post-card {
+    background-color: var(--blog-card-bg);
+    border-color: var(--blog-border);
+
+    &:hover {
+      border-color: var(--blog-primary-border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+
+      .post-card-title a {
+        color: var(--blog-primary-hover);
+      }
+
+      .post-card-readmore {
+        color: var(--blog-primary-hover);
+      }
+    }
+
+    .post-card-title a {
+      color: #f1f5f9;
+    }
+  }
+
+  .post-nav-link {
+    background-color: var(--blog-card-bg);
+    border-color: var(--blog-border);
+
+    &:hover {
+      border-color: var(--blog-primary);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+
+      .nav-title {
+        color: var(--blog-primary-hover);
+      }
+    }
+
+    .nav-title {
+      color: #f1f5f9;
+    }
+  }
+}
+
+body.colorscheme-dark {
+  @include blog_dark();
+}
+
+body.colorscheme-auto {
+  @media (prefers-color-scheme: dark) {
+    @include blog_dark();
+  }
+}

@@ -2,20 +2,25 @@
   {{ title (i18n (lower .Title)) | default .Title }} · {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
-  <section class="container list">
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="{{ .Permalink | safeURL }}">
-          {{ title (i18n (lower .Title)) | default .Title }}
-        </a>
+  <section class="container blog-list-container">
+    <header class="blog-list-header">
+      <h1 class="blog-list-title">
+        {{ title (i18n (lower .Title)) | default .Title }}
       </h1>
+      <p class="blog-list-subtitle">Notes and articles on distributed systems, AI & ML engineering, cloud infrastructure, and security.</p>
     </header>
-    {{ .Content }}
-    <ul>
+
+    {{ with .Content }}
+      <div class="blog-list-intro">
+        {{ . }}
+      </div>
+    {{ end }}
+
+    <div class="blog-posts-grid">
       {{- range .Paginator.Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
-    </ul>
+    </div>
 
     {{ partial "pagination.html" . }}
   </section>

@@ -2,55 +2,177 @@
   {{ .Title }} · {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="{{ .Permalink | safeURL }}">
-              {{ .Title }}
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                {{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              {{ i18n "reading_time" .ReadingTime }}
-            </span>
-          </div>
-          {{ with .GetTerms "authors" }}{{ partial "taxonomy/authors.html" . }}{{ end }}
-          {{ with .GetTerms "categories" }}{{ partial "taxonomy/categories.html" . }}{{ end }}
-          {{ with .GetTerms "tags" }}{{ partial "taxonomy/tags.html" . }}{{ end }}
-        </div>
-      </header>
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-container" class="reading-progress-container" aria-hidden="true">
+    <div id="reading-progress-bar" class="reading-progress-bar"></div>
+  </div>
 
-      <div class="post-content">
-        {{ if .Params.featuredImage }}
-          <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+  <section class="container post-layout">
+    <!-- Breadcrumb Navigation -->
+    <nav class="post-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ "posts/" | relLangURL }}" class="back-link">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        <span>All Posts</span>
+      </a>
+      {{ with .GetTerms "categories" }}
+        <span class="breadcrumb-separator">/</span>
+        {{ range first 1 . }}
+          <a href="{{ .RelPermalink }}" class="breadcrumb-category">{{ .LinkTitle }}</a>
         {{ end }}
-        {{ .Content }}
-      </div>
+      {{ end }}
+    </nav>
 
+    {{ $hasHeadings := and (gt (len .TableOfContents) 32) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}
+    <div class="post-grid{{ if not $hasHeadings }} no-sidebar{{ end }}">
+      <!-- Main Article Column -->
+      <article class="post-article">
+        <header class="post-header">
+          <div class="post-title-wrapper">
+            <h1 class="post-title">{{ .Title }}</h1>
+          </div>
 
-      <footer>
-        {{ partial "posts/series.html" . }}
-        {{ partial "posts/disqus.html" . }}
-        {{ partial "posts/commento.html" . }}
-        {{ partial "posts/utterances.html" . }}
-        {{ partial "posts/giscus.html" . }}
-        {{ partial "posts/mastodon.html" . }}
-        {{ partial "posts/telegram.html" . }}
-        {{ partial "posts/cusdis.html" . }}
-      </footer>
-    </article>
+          <div class="post-meta-bar">
+            <div class="post-meta-primary">
+              <span class="meta-item date" title="Published date">
+                <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                  {{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+                </time>
+              </span>
+
+              <span class="meta-item reading-time" title="Estimated reading time">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <span>{{ i18n "reading_time" .ReadingTime }}</span>
+              </span>
+
+              {{ with .GetTerms "authors" }}
+                <span class="meta-item author" title="Author">
+                  <i class="fa-solid fa-user" aria-hidden="true"></i>
+                  {{ range $index, $el := . }}
+                    {{ if gt $index 0 }}, {{ end }}
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                  {{ end }}
+                </span>
+              {{ end }}
+            </div>
+
+            {{ if or (.GetTerms "categories") (.GetTerms "tags") }}
+              <div class="post-taxonomies">
+                {{ with .GetTerms "categories" }}
+                  <div class="post-categories">
+                    {{ range . }}
+                      <a href="{{ .RelPermalink }}" class="badge-category">
+                        <i class="fa-solid fa-folder" aria-hidden="true"></i>
+                        {{ .LinkTitle }}
+                      </a>
+                    {{ end }}
+                  </div>
+                {{ end }}
+
+                {{ with .GetTerms "tags" }}
+                  <div class="post-tags">
+                    {{ range . }}
+                      <a href="{{ .RelPermalink }}" class="badge-tag">
+                        #{{ .LinkTitle }}
+                      </a>
+                    {{ end }}
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        </header>
+
+        <!-- In-line Table of Contents for Mobile / Tablets -->
+        {{ if $hasHeadings }}
+          <div class="post-toc-inline" id="post-toc-inline">
+            <details class="toc-details" open>
+              <summary class="toc-summary">
+                <span class="toc-title">
+                  <i class="fa-solid fa-list-ul" aria-hidden="true"></i>
+                  <span>Table of Contents</span>
+                </span>
+                <span class="toc-toggle-indicator"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+              </summary>
+              <div class="toc-content">
+                {{ .TableOfContents }}
+              </div>
+            </details>
+          </div>
+        {{ end }}
+
+        <div class="post-content">
+          {{ if .Params.featuredImage }}
+            <figure class="featured-image">
+              <img src="{{ .Params.featuredImage | relURL }}" alt="{{ .Title }}"/>
+            </figure>
+          {{ end }}
+          {{ .Content }}
+        </div>
+
+        <footer class="post-footer">
+          {{ partial "posts/series.html" . }}
+
+          <!-- Prev / Next Navigation Cards -->
+          <nav class="post-nav" aria-label="Post navigation">
+            <div class="post-nav-item post-nav-prev">
+              {{ with .PrevInSection }}
+                <a href="{{ .RelPermalink }}" rel="prev" class="post-nav-link">
+                  <span class="nav-label"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Previous Post</span>
+                  <span class="nav-title">{{ .Title }}</span>
+                </a>
+              {{ end }}
+            </div>
+            <div class="post-nav-item post-nav-next">
+              {{ with .NextInSection }}
+                <a href="{{ .RelPermalink }}" rel="next" class="post-nav-link">
+                  <span class="nav-label">Next Post <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                  <span class="nav-title">{{ .Title }}</span>
+                </a>
+              {{ end }}
+            </div>
+          </nav>
+
+          {{ partial "posts/disqus.html" . }}
+          {{ partial "posts/commento.html" . }}
+          {{ partial "posts/utterances.html" . }}
+          {{ partial "posts/giscus.html" . }}
+          {{ partial "posts/mastodon.html" . }}
+          {{ partial "posts/telegram.html" . }}
+          {{ partial "posts/cusdis.html" . }}
+        </footer>
+      </article>
+
+      <!-- Sticky Sidebar TOC for Desktop -->
+      {{ if $hasHeadings }}
+        <aside class="post-sidebar" aria-label="Table of contents">
+          <div class="sticky-sidebar-wrapper">
+            <div class="sidebar-heading">
+              <i class="fa-solid fa-compass" aria-hidden="true"></i>
+              <span>On this page</span>
+            </div>
+            <nav class="sidebar-toc" id="sidebar-toc">
+              {{ .TableOfContents }}
+            </nav>
+            <div class="sidebar-actions">
+              <button type="button" class="sidebar-action-btn" id="btn-back-to-top" title="Scroll to top">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                <span>Back to top</span>
+              </button>
+            </div>
+          </div>
+        </aside>
+      {{ end }}
+    </div>
 
     {{ partial "posts/math.html" . }}
+
+    {{ if hugo.IsServer }}
+      {{ $blogScript := resources.Get "js/blog.js" }}
+      <script src="{{ $blogScript.RelPermalink }}" defer></script>
+    {{ else }}
+      {{ $blogScript := resources.Get "js/blog.js" | minify | fingerprint }}
+      <script src="{{ $blogScript.RelPermalink }}" integrity="{{ $blogScript.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    {{ end }}
   </section>
 {{ end }}
