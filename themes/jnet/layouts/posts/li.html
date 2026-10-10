@@ -24,10 +24,10 @@
   </h2>
 
   {{ $summary := "" }}
-  {{ with .Description }}
-    {{ $summary = . }}
-  {{ else with .Summary }}
-    {{ $summary = . | plainify }}
+  {{ if .Description }}
+    {{ $summary = .Description }}
+  {{ else if .Summary }}
+    {{ $summary = .Summary | plainify }}
     {{ $summary = replaceRE `(?i)^.*?Link to heading\s*` "" $summary }}
     {{ $summary = $summary | chomp | truncate 180 }}
   {{ end }}
